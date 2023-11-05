@@ -14,7 +14,7 @@
                     <li><a href="#">Блог</a></li>
                     <li>
                         <a href="#">
-                            <i class="fa-solid fa-user"></i> Мой кабинет
+                            <i class="fa-solid fa-user"></i>
                         </a>
                         <ul>
                             <li><a href="<?php echo BASE_URL . 'log.php' ?>">Админ панель</a></li>

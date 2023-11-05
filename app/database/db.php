@@ -101,6 +101,8 @@ function insert($table, $params){
     $query->execute($params);
 
     dbCheckError($query);
+
+    return $pdo->lastInsertId();
 }
 
 // Обновление строки в таблице

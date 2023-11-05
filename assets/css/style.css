@@ -340,3 +340,9 @@ FORMS
     margin-left: 75px;
     transition: all 0.3s;
 }
+
+form div.err p{
+    color: red;
+    font-style: italic;
+    font-size: 1rem;
+}

@@ -44,7 +44,7 @@
         <div class="w-100"></div>
         <div class="mb-3 col-12 col-md-4">
             <button type="submit" class="btn btn-primary">Войти</button>
-            <a href="aut.html">Зарегистрироваться</a>
+            <a href="reg.php">Зарегистрироваться</a>
         </div>
     </form>
 </div>

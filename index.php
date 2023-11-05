@@ -86,7 +86,7 @@
                     <i class="far fa-user"> Имя Автора</i>
                     <i class="far fa-calendar"> Oct 21, 2023</i>
                     <p class="preview-text">
-                        4to za huinia???
+                        Кратенькое описание статьи, Кратенькое описание статьи
                     </p>
                 </div>
             </div>
@@ -101,7 +101,7 @@
                     <i class="far fa-user"> Имя Автора</i>
                     <i class="far fa-calendar"> Oct 21, 2023</i>
                     <p class="preview-text">
-                        4to za huinia???
+                        Кратенькое описание статьи, Кратенькое описание статьи
                     </p>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                     <i class="far fa-user"> Имя Автора</i>
                     <i class="far fa-calendar"> Oct 21, 2023</i>
                     <p class="preview-text">
-                        4to za huinia???
+                        Кратенькое описание статьи, Кратенькое описание статьи
                     </p>
                 </div>
             </div>
@@ -131,7 +131,7 @@
                     <i class="far fa-user"> Имя Автора</i>
                     <i class="far fa-calendar"> Oct 21, 2023</i>
                     <p class="preview-text">
-                        4to za huinia???
+                        Кратенькое описание статьи, Кратенькое описание статьи
                     </p>
                 </div>
             </div>
@@ -146,7 +146,7 @@
                     <i class="far fa-user"> Имя Автора</i>
                     <i class="far fa-calendar"> Oct 21, 2023</i>
                     <p class="preview-text">
-                        4to za huinia???
+                        Кратенькое описание статьи, Кратенькое описание статьи
                     </p>
                 </div>
             </div>
@@ -161,7 +161,7 @@
                     <i class="far fa-user"> Имя Автора</i>
                     <i class="far fa-calendar"> Oct 21, 2023</i>
                     <p class="preview-text">
-                        4to za huinia???
+                        Кратенькое описание статьи, Кратенькое описание статьи
                     </p>
                 </div>
             </div>
@@ -176,7 +176,7 @@
                     <i class="far fa-user"> Имя Автора</i>
                     <i class="far fa-calendar"> Oct 21, 2023</i>
                     <p class="preview-text">
-                        4to za huinia???
+                        Кратенькое описание статьи, Кратенькое описание статьи
                     </p>
                 </div>
             </div>
@@ -192,9 +192,6 @@
             <div class="section topics">
                 <h3>Категории</h3>
                 <ul>
-                    <li><a href="#">По Уфе</a></li>
-                    <li><a href="#">По Уфе</a></li>
-                    <li><a href="#">По Уфе</a></li>
                     <li><a href="#">По Уфе</a></li>
                     <li><a href="#">По Уфе</a></li>
                     <li><a href="#">По Уфе</a></li>
