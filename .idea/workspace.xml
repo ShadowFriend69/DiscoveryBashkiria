@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a871aed-7fe6-4f96-b709-864cff7b2b65" name="Changes" comment="Добавил возможность добавления нового пользователя в бд и проверки при регистрации нового пользователя">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8a67c4c8-2aab-474c-b13d-62eeba7365d4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8a67c4c8-2aab-474c-b13d-62eeba7365d4/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8a67c4c8-2aab-474c-b13d-62eeba7365d4/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8a67c4c8-2aab-474c-b13d-62eeba7365d4/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8a67c4c8-2aab-474c-b13d-62eeba7365d4/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
+    <list default="true" id="0a871aed-7fe6-4f96-b709-864cff7b2b65" name="Changes" comment="pukpuk">
+      <change afterPath="$PROJECT_DIR$/admin/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/include/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/include/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,29 +46,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Program Files/Ampps/www/DiscoveryBashkiria",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Ampps/www/DiscoveryBashkiria&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Program Files\Ampps\www\DiscoveryBashkiria" />
@@ -87,7 +87,8 @@
       <workItem from="1697904235922" duration="6987000" />
       <workItem from="1697974835397" duration="8363000" />
       <workItem from="1699098942219" duration="15793000" />
-      <workItem from="1699171910341" duration="18820000" />
+      <workItem from="1699171910341" duration="19309000" />
+      <workItem from="1699250184699" duration="4458000" />
     </task>
     <task id="LOCAL-00001" summary="Добавил дату в файл README.md. Подтянул файлы из IDE">
       <created>1699120654878</created>
@@ -110,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699192193008</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="pukpuk">
+      <created>1699192685211</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699192685211</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +139,7 @@
     <MESSAGE value="Добавил дату в файл README.md. Подтянул файлы из IDE" />
     <MESSAGE value="Добавил общие запросы на SELECT, INSERT, UPDATE и DELETE" />
     <MESSAGE value="Добавил возможность добавления нового пользователя в бд и проверки при регистрации нового пользователя" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил возможность добавления нового пользователя в бд и проверки при регистрации нового пользователя" />
+    <MESSAGE value="pukpuk" />
+    <option name="LAST_COMMIT_MESSAGE" value="pukpuk" />
   </component>
 </project>
