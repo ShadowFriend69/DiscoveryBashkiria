@@ -160,7 +160,6 @@ SIDEBAR
 .sidebar ul a:hover{
     background: #CCD6A6;
     border-radius: 5px;
-    /*width: 150px;*/
     width: min-content;
 }
 
@@ -173,7 +172,7 @@ SIDEBAR
 
 .posts h2{
     text-align: center;
-    margin: 1.5rem 0;
+    margin: 2rem 0 0 0.4rem;
 
 }
 
@@ -188,4 +187,8 @@ SIDEBAR
     padding: 15px;
     text-align: center;
     border-bottom: 1px solid #918780;
+}
+
+.add-post form div{
+    margin: 2rem 0;
 }
