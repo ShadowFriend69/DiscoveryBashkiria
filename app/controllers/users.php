@@ -4,14 +4,14 @@ include 'app/database/db.php';
 $errMsg = '';
 
 /**
- * @param $data
+ * @param $user
  * @return void
  */
-function userAuth($data): void
+function userAuth($user): void
 {
-    $_SESSION['id'] = $data['user_id'];
-    $_SESSION['login'] = $data['user_name'];
-    $_SESSION['admin'] = $data['is_user_admin'];
+    $_SESSION['id'] = $user['user_id'];
+    $_SESSION['login'] = $user['user_name'];
+    $_SESSION['admin'] = $user['is_user_admin'];
 
     if ($_SESSION['admin']) {
         header('location' . BASE_URL . 'admin/admin.php');
