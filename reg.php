@@ -62,7 +62,7 @@
         </div>
         <div class="w-100"></div>
         <div class="mb-3 col-12 col-md-4">
-            <button name="button_reg" type="submit" class="btn btn-primary">Регистрация</button>
+            <button name="button-reg" type="submit" class="btn btn-primary">Регистрация</button>
             <a href="aut.html">Войти</a>
         </div>
     </form>
