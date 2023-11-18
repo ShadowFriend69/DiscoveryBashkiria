@@ -166,7 +166,7 @@ SIDEBAR
 .posts{
     height: 100%;
     padding: 24px 84px 84px;
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
     margin: 16px;
 }
 
