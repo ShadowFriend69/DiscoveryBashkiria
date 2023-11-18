@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a871aed-7fe6-4f96-b709-864cff7b2b65" name="Changes" comment="Добавил логику авторизации">
-      <change afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+    <list default="true" id="0a871aed-7fe6-4f96-b709-864cff7b2b65" name="Changes" comment="Добавил логику разлогинивания">
+      <change afterPath="$PROJECT_DIR$/admin/posts/create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/posts/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/topics/create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/topics/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/users/create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/users/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/include/header-admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/admin.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/include/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/include/header.php" afterDir="false" />
@@ -27,8 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -50,7 +57,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Program Files/Ampps/www/DiscoveryBashkiria",
+    "last_opened_file_path": "C:/Program Files/Ampps/www/DiscoveryBashkiria/admin/users",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -67,6 +74,10 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Program Files\Ampps\www\DiscoveryBashkiria\admin\users" />
+      <recent name="C:\Program Files\Ampps\www\DiscoveryBashkiria\admin\topics" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Program Files\Ampps\www\DiscoveryBashkiria" />
       <recent name="C:\Program Files\Ampps\www\DiscoveryBashkiria\assets" />
@@ -89,7 +100,7 @@
       <workItem from="1699704240012" duration="54000" />
       <workItem from="1699704302017" duration="763000" />
       <workItem from="1700303680230" duration="1107000" />
-      <workItem from="1700307786346" duration="4817000" />
+      <workItem from="1700307786346" duration="12608000" />
     </task>
     <task id="LOCAL-00001" summary="Добавил дату в файл README.md. Подтянул файлы из IDE">
       <created>1699120654878</created>
@@ -133,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700313877865</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Добавил логику разлогинивания">
+      <created>1700314510061</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700314510061</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +175,7 @@
     <MESSAGE value="pukpuk" />
     <MESSAGE value="Создал SESSION после регистрации на сайте" />
     <MESSAGE value="Добавил логику авторизации" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил логику авторизации" />
+    <MESSAGE value="Добавил логику разлогинивания" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил логику разлогинивания" />
   </component>
 </project>
