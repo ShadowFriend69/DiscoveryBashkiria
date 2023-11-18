@@ -61,24 +61,24 @@ include '../../app/database/db.php';
             </div>
             <div class="row add-post">
                 <form action="create.php" method="post">
-                    <div class="col">
+                    <div class="col mb-4">
                         <input type="text" class="form-control" placeholder="Название статьи" aria-label="Название статьи">
                     </div>
                     <div class="col">
-                        <label for="content" class="form-label">Содержимое записи</label>
-                        <textarea class="form-control" id="content" rows="6"></textarea>
+                        <label for="editor" class="form-label">Содержимое записи</label>
+                        <textarea id="editor" class="form-control" rows="6"></textarea>
                     </div>
-                    <div class="input-group col">
+                    <div class="input-group col mb-4 mt-4">
                         <input type="file" class="form-control" id="inputGroupFile02">
                         <label class="input-group-text" for="inputGroupFile02">Загрузить</label>
                     </div>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select mb-4" aria-label="Default select example">
                         <option selected>Open this select menu</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
                     </select>
-                    <div class="col">
+                    <div class="col mb-4">
                         <button class="btn btn-primary" type="submit">Сохранить запись</button>
                     </div>
                 </form>
@@ -101,10 +101,12 @@ include '../../app/database/db.php';
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!-- Добавление текстового редактора к текстовому полю -->
+<script src="https://cdn.ckeditor.com/ckeditor5/40.1.0/classic/ckeditor.js"></script>
 
 <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 -->
-<script src="../../assets/js/script.js"
+<script src="../../assets/js/script.js"></script>
 </body>
 </html>
