@@ -1,6 +1,8 @@
 <?php
     include '../../app/database/db.php';
     include '../../app/controllers/users.php';
+    include '../../path.php';
+
 // session_start();
 ?>
 <!doctype html>
@@ -39,9 +41,9 @@
     <?php include "../../app/include/sidebar-admin.php"; ?>
         <div class="posts col-10">
             <div class="button-row">
-                <a href="create.html" class="col-2 btn btn-success">Добавить пользователя</a>
+                <a href="<?php echo BASE_URL . "admin/users/create.php"; ?>" class="col-2 btn btn-success">Добавить</a>
                 <span class="col-1"></span>
-                <a href="index.html" class="col-2 btn btn-warning">Управление пользователями</a>
+                <a href="<?php echo BASE_URL . "admin/users/index.php"; ?>" class="col-2 btn btn-warning">Редактировать</a>
             </div>
             <div class="row title-table">
                 <h2>Добавление пользователя</h2>

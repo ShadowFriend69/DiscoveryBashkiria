@@ -1,6 +1,6 @@
 <?php
-include '../../path.php';
-include '../../app/database/db.php';
+    include '../../path.php';
+    include '../../app/database/db.php';
 // session_start();
 ?>
 <!doctype html>
@@ -39,9 +39,9 @@ include '../../app/database/db.php';
     <?php include "../../app/include/sidebar-admin.php"; ?>
         <div class="posts col-10">
             <div class="button-row">
-                <a href="create.html" class="col-3 btn btn-success">Добавить категорию</a>
+                <a href="<?php echo BASE_URL . "admin/topics/create.php"; ?>" class="col-2 btn btn-success">Добавить</a>
                 <span class="col-1"></span>
-                <a href="index.html" class="col-3 btn btn-warning">Управление категориями</a>
+                <a href="<?php echo BASE_URL . "admin/topics/index.php"; ?>" class="col-2 btn btn-warning">Редактировать</a>
             </div>
             <div class="row title-table">
                 <h2>Добавление категории</h2>
