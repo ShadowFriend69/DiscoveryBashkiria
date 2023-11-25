@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a871aed-7fe6-4f96-b709-864cff7b2b65" name="Changes" comment="Верстка страницы создания нового пользователя">
+    <list default="true" id="0a871aed-7fe6-4f96-b709-864cff7b2b65" name="Changes" comment="Кастомизация поля для ввода содержимого статьи">
+      <change afterPath="$PROJECT_DIR$/app/include/sidebar-admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/posts/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/posts/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/posts/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/posts/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/topics/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/topics/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/topics/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/topics/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/users/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/users/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/users/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/users/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,29 +49,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Program Files/Ampps/www/DiscoveryBashkiria/admin/users",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Ampps/www/DiscoveryBashkiria/admin/users&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Program Files\Ampps\www\DiscoveryBashkiria\admin\users" />
@@ -94,7 +99,9 @@
       <workItem from="1699704240012" duration="54000" />
       <workItem from="1699704302017" duration="763000" />
       <workItem from="1700303680230" duration="1107000" />
-      <workItem from="1700307786346" duration="18495000" />
+      <workItem from="1700307786346" duration="18713000" />
+      <workItem from="1700393816645" duration="2882000" />
+      <workItem from="1700503402881" duration="300000" />
     </task>
     <task id="LOCAL-00001" summary="Добавил дату в файл README.md. Подтянул файлы из IDE">
       <created>1699120654878</created>
@@ -173,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700331418478</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Кастомизация поля для ввода содержимого статьи">
+      <created>1700332521660</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700332521660</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +216,7 @@
     <MESSAGE value="Верстка страницы создания новой записи" />
     <MESSAGE value="Верстка страницы создания новой категории" />
     <MESSAGE value="Верстка страницы создания нового пользователя" />
-    <option name="LAST_COMMIT_MESSAGE" value="Верстка страницы создания нового пользователя" />
+    <MESSAGE value="Кастомизация поля для ввода содержимого статьи" />
+    <option name="LAST_COMMIT_MESSAGE" value="Кастомизация поля для ввода содержимого статьи" />
   </component>
 </project>

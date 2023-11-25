@@ -1,5 +1,4 @@
 <?php
-    include '../../path.php';
     include '../../app/database/db.php';
     // session_start();
 ?>
@@ -36,20 +35,7 @@
 <!-- Блок MAIN START -->
 
 <div class="container">
-    <div class="row">
-        <div class="sidebar col-2">
-            <ul>
-                <li>
-                    <a href="">Записи</a>
-                </li>
-                <li>
-                    <a href="">Пользователи</a>
-                </li>
-                <li>
-                    <a href="">Категории</a>
-                </li>
-            </ul>
-        </div>
+    <?php include "../../app/include/sidebar-admin.php"; ?>
         <div class="posts col-10">
             <div class="button-row">
                 <a href="create.html" class="col-2 btn btn-success">Добавить пост</a>
