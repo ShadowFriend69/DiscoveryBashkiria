@@ -1,6 +1,6 @@
 <?php
-    include 'path.php';
-    include 'app/database/db.php';
+    include "path.php";
+    include "app/controllers/topics.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -195,10 +195,12 @@
             <div class="section topics">
                 <h3>Категории</h3>
                 <ul>
-                    <li><a href="#">По Уфе</a></li>
-                    <li><a href="#">По Уфе</a></li>
-                    <li><a href="#">По Уфе</a></li>
-                    <li><a href="#">По Уфе</a></li>
+                    <?php foreach ($topics as $key => $topic): ?>
+                        <li>
+                            <a href="#"><?=$topic['topic_name']; ?></a>
+                        </li>
+                    <?php endforeach; ?>
+
                 </ul>
             </div>
 
