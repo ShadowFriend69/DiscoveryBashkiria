@@ -7,6 +7,7 @@ function tt($value){
     echo '<pre>';
     print_r($value);
     echo '<pre>';
+    exit();
 }
 
 // Проверка выполнения запроса
@@ -107,6 +108,7 @@ function insert($table, $params){
 }
 
 // Обновление строки в таблице
+
 function update($table, $user_id, $params){
     global $pdo;
     $i = 0;
@@ -128,11 +130,45 @@ function update($table, $user_id, $params){
     dbCheckError($query);
 }
 
+// обновление категории
+function update_topic($table, $topic_id, $params){
+    global $pdo;
+    $i = 0;
+    $str = '';
+    foreach ($params as $key => $value){
+        if ($i === 0){
+            $str = $str . $key . " = '" . $value . "'";
+        }else{
+            $str = $str . ", $key" . " = '" . $value . "'";
+        }
+        $i++;
+    }
+
+    $sql = "UPDATE $table SET $str WHERE topic_id = $topic_id";
+
+    $query = $pdo->prepare($sql);
+    $query->execute($params);
+
+    dbCheckError($query);
+}
+
 // Удаление строки в таблице
 function delete($table, $user_id){
     global $pdo;
 
     $sql = "DELETE FROM $table WHERE user_id = $user_id";
+
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    dbCheckError($query);
+}
+
+// Удаление строки в таблице topics
+function delete_topic($table, $topic_id){
+    global $pdo;
+
+    $sql = "DELETE FROM $table WHERE topic_id = $topic_id";
 
     $query = $pdo->prepare($sql);
     $query->execute();

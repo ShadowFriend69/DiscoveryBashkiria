@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a871aed-7fe6-4f96-b709-864cff7b2b65" name="Changes" comment="Вынес sidebar-admin в отдельный файл">
+    <list default="true" id="0a871aed-7fe6-4f96-b709-864cff7b2b65" name="Changes" comment="Прописал пути переходов для sidebar-admin">
+      <change afterPath="$PROJECT_DIR$/admin/topics/edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/topics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8a67c4c8-2aab-474c-b13d-62eeba7365d4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8a67c4c8-2aab-474c-b13d-62eeba7365d4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/posts/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/posts/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/posts/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/posts/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/topics/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/topics/create.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/topics/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/topics/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/users/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/users/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/users/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/users/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/db.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +37,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="1589c31c-6cad-4489-986c-5a67583c8c6c" />
+        <option name="url" value="https://github.com/ShadowFriend69/DiscoveryBashkiria.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -100,7 +113,9 @@
       <workItem from="1700307786346" duration="18713000" />
       <workItem from="1700393816645" duration="2882000" />
       <workItem from="1700503402881" duration="300000" />
-      <workItem from="1700899016553" duration="2228000" />
+      <workItem from="1700899016553" duration="4898000" />
+      <workItem from="1700903985946" duration="851000" />
+      <workItem from="1702630661860" duration="8700000" />
     </task>
     <task id="LOCAL-00001" summary="Добавил дату в файл README.md. Подтянул файлы из IDE">
       <created>1699120654878</created>
@@ -193,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700899692345</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Прописал пути переходов для sidebar-admin">
+      <created>1700901425999</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1700901425999</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +246,7 @@
     <MESSAGE value="Верстка страницы создания нового пользователя" />
     <MESSAGE value="Кастомизация поля для ввода содержимого статьи" />
     <MESSAGE value="Вынес sidebar-admin в отдельный файл" />
-    <option name="LAST_COMMIT_MESSAGE" value="Вынес sidebar-admin в отдельный файл" />
+    <MESSAGE value="Прописал пути переходов для sidebar-admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Прописал пути переходов для sidebar-admin" />
   </component>
 </project>

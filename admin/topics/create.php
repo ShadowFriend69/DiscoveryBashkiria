@@ -1,6 +1,6 @@
 <?php
-    include '../../path.php';
-    include '../../app/database/db.php';
+    include "../../path.php";
+    include "../../app/controllers/topics.php";
 // session_start();
 ?>
 <!doctype html>
@@ -28,7 +28,7 @@
 
 <!-- Блок HEADER START -->
 
-<?php include('../../app/include/header-admin.php'); ?>
+<?php include("../../app/include/header-admin.php"); ?>
 
 <!-- Блок HEADER END -->
 
@@ -46,17 +46,20 @@
             <div class="row title-table">
                 <h2>Добавление категории</h2>
             </div>
+            <div class="mb-12 col-12 col-md-12 err">
+                <p><?=$errMsg?></p>
+            </div>
             <div class="row add-post">
                 <form action="create.php" method="post">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Название категории" aria-label="Название категории">
+                        <input name="name" value="<?=$name; ?>" type="text" class="form-control" placeholder="Название категории" aria-label="Название категории">
                     </div>
                     <div class="col">
                         <label for="content" class="form-label">Описание категории</label>
-                        <textarea class="form-control" id="content" rows="3"></textarea>
+                        <textarea name="description" class="form-control" id="content" rows="3"><?=$description; ?></textarea>
                     </div>
                     <div class="col">
-                        <button class="btn btn-primary" type="submit">Сохранить категорию</button>
+                        <button name="topic-create" class="btn btn-primary" type="submit">Сохранить категорию</button>
                     </div>
                 </form>
             </div>
