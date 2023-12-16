@@ -174,3 +174,29 @@ function delete_topic($table, $topic_id){
 
     dbCheckError($query);
 }
+
+// Выборка постов с автором в админку
+function selectAllFromPostsWithUsers($table1, $table2){
+    global $pdo;
+
+    $sql = "
+            SELECT 
+                t1.post_id,
+                t1.post_title,
+                t1.post_img,
+                t1.post_content,
+                t1.post_status,
+                t1.topic_id,
+                t1.post_created_date,
+                t2.user_name
+            FROM 
+                $table1 AS t1 JOIN $table2 AS t2 ON t1.user_id = t2.user_id
+    ";
+
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    dbCheckError($query);
+
+    return $query->fetchAll();
+}

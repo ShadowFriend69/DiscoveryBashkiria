@@ -1,7 +1,6 @@
 <?php
-    include '../../app/database/db.php';
-    include '../../path.php';
-    // session_start();
+    include "../../path.php";
+    include "../../app/controllers/posts.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -28,7 +27,7 @@
 
 <!-- Блок HEADER START -->
 
-<?php include('../../app/include/header-admin.php'); ?>
+<?php include("../../app/include/header-admin.php"); ?>
 
 <!-- Блок HEADER END -->
 
@@ -50,27 +49,20 @@
                 <div class="col-2">Автор</div>
                 <div class="col-4">Управление</div>
             </div>
+            <? foreach ($postsAdm as $key => $post): ?>
             <div class="row post">
-                <div class="id col-1">1</div>
-                <div class="title col-5">Моя статья</div>
-                <div class="author col-2">Мамлеев М.Р.</div>
-                <div class="edit col-2"><a href="">Edit</a></div>
-                <div class="delete col-2"><a href="">Delete</a></div>
+                <div class="id col-1"><?=$key + 1; ?></div>
+                <div class="title col-5"><?=$post['post_title']; ?></div>
+                <div class="author col-2"><?=$post['user_name']; ?></div>
+                <div class="edit col-1"><a href="">Edit</a></div>
+                <div class="delete col-1"><a href="">Delete</a></div>
+                <?php if ($post['post_status']): ?>
+                    <div class="status col-2"><a href="">unpublish</a></div>
+                <?php else: ?>
+                <div class="status col-2"><a href="">publish</a></div>
+                <? endif; ?>
             </div>
-            <div class="row post">
-                <div class="id col-1">1</div>
-                <div class="title col-5">Моя статья</div>
-                <div class="author col-2">Мамлеев М.Р.</div>
-                <div class="edit col-2"><a href="">Edit</a></div>
-                <div class="delete col-2"><a href="">Delete</a></div>
-            </div>
-            <div class="row post">
-                <div class="id col-1">1</div>
-                <div class="title col-5">Моя статья</div>
-                <div class="author col-2">Мамлеев М.Р.</div>
-                <div class="edit col-2"><a href="">Edit</a></div>
-                <div class="delete col-2"><a href="">Delete</a></div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>
@@ -81,7 +73,7 @@
 
 <!-- Блок footer START -->
 
-<?php include('../../app/include/footer.php'); ?>
+<?php include("../../app/include/footer.php"); ?>
 
 <!-- Блок footer END -->
 

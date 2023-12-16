@@ -10,6 +10,8 @@ $img = '';
 $topic = '';
 
 $topics = selectAll('topics');
+$posts = selectAll('posts');
+$postsAdm = selectAllFromPostsWithUsers('posts', 'users');
 
 
 // Код для добавления нового поста
@@ -17,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_post'])) {
     $title = trim($_POST['post_title']);
     $content = trim($_POST['post_content']);
     $topic = trim($_POST['post_topic']);
+    $publish = isset($_POST['publish']) ? 1 : 0;
 
     if($title === '' || $content === '' || $topic === ''){
         $errMsg = "Не все поля заполнены!";
@@ -28,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_post'])) {
             'post_title' => $title,
             'post_content' => $content,
             'post_img' => $_POST['post_img'],
-            'post_status' => 1,
+            'post_status' => $publish,
             'topic_id' => $topic,
         ];
         $post = insert('posts', $post);

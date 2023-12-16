@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a871aed-7fe6-4f96-b709-864cff7b2b65" name="Changes" comment="Вывод &quot;Категорий&quot; на главной странице + добавлние переменной SITE_ROOT">
-      <change afterPath="$PROJECT_DIR$/app/controllers/posts.php" afterDir="false" />
+    <list default="true" id="0a871aed-7fe6-4f96-b709-864cff7b2b65" name="Changes" comment="Логика создания поста через админку">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8a67c4c8-2aab-474c-b13d-62eeba7365d4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8a67c4c8-2aab-474c-b13d-62eeba7365d4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/posts/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/posts/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/topics/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/topics/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/posts/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/posts/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/database/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/db.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +115,7 @@
       <workItem from="1700899016553" duration="4898000" />
       <workItem from="1700903985946" duration="851000" />
       <workItem from="1702630661860" duration="10473000" />
-      <workItem from="1702717930127" duration="4787000" />
+      <workItem from="1702717930127" duration="8520000" />
     </task>
     <task id="LOCAL-00001" summary="Добавил дату в файл README.md. Подтянул файлы из IDE">
       <created>1699120654878</created>
@@ -228,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702644018841</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Логика создания поста через админку">
+      <created>1702726922033</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1702726922033</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +270,7 @@
     <MESSAGE value="Прописал пути переходов для sidebar-admin" />
     <MESSAGE value="создание, чтение, редактирование и удаление &quot;Категорий&quot;" />
     <MESSAGE value="Вывод &quot;Категорий&quot; на главной странице + добавлние переменной SITE_ROOT" />
-    <option name="LAST_COMMIT_MESSAGE" value="Вывод &quot;Категорий&quot; на главной странице + добавлние переменной SITE_ROOT" />
+    <MESSAGE value="Логика создания поста через админку" />
+    <option name="LAST_COMMIT_MESSAGE" value="Логика создания поста через админку" />
   </component>
 </project>
