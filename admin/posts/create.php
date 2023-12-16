@@ -1,10 +1,9 @@
 <?php
-    include '../../path.php';
-    include '../../app/database/db.php';
-// session_start();
+    include "../../path.php";
+    include "../../app/controllers/posts.php";
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +27,7 @@
 
 <!-- Блок HEADER START -->
 
-<?php include('../../app/include/header-admin.php'); ?>
+<?php include("../../app/include/header-admin.php"); ?>
 
 <!-- Блок HEADER END -->
 
@@ -49,24 +48,24 @@
             <div class="row add-post">
                 <form action="create.php" method="post">
                     <div class="col mb-4">
-                        <input type="text" class="form-control" placeholder="Название статьи" aria-label="Название статьи">
+                        <input name="post_title" type="text" class="form-control" placeholder="Название статьи" aria-label="Название статьи">
                     </div>
                     <div class="col">
                         <label for="editor" class="form-label">Содержимое записи</label>
-                        <textarea id="editor" class="form-control" rows="6"></textarea>
+                        <textarea name="post_content" id="editor" class="form-control" rows="6"></textarea>
                     </div>
                     <div class="input-group col mb-4 mt-4">
-                        <input type="file" class="form-control" id="inputGroupFile02">
+                        <input name="post_img" type="file" class="form-control" id="inputGroupFile02">
                         <label class="input-group-text" for="inputGroupFile02">Загрузить</label>
                     </div>
-                    <select class="form-select mb-4" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <select name="post_topic" class="form-select mb-4" aria-label="Default select example">
+                        <option selected>Категория поста:</option>
+                        <?php foreach ($topics as $key => $topic): ?>
+                            <option value="<?=$topic['topic_id']; ?>"><?=$topic['topic_name']; ?></option>
+                        <?php endforeach; ?>
                     </select>
                     <div class="col mb-4">
-                        <button class="btn btn-primary" type="submit">Сохранить запись</button>
+                        <button name="add_post" class="btn btn-primary" type="submit">Добавить запись</button>
                     </div>
                 </form>
             </div>
@@ -81,7 +80,7 @@
 
 <!-- Блок footer START -->
 
-<?php include('../../app/include/footer.php'); ?>
+<?php include("../../app/include/footer.php"); ?>
 
 <!-- Блок footer END -->
 

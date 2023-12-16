@@ -108,7 +108,6 @@ function insert($table, $params){
 }
 
 // Обновление строки в таблице
-
 function update($table, $user_id, $params){
     global $pdo;
     $i = 0;

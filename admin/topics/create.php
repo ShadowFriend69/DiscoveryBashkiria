@@ -1,7 +1,6 @@
 <?php
     include "../../path.php";
     include "../../app/controllers/topics.php";
-// session_start();
 ?>
 <!doctype html>
 <html lang="en">
