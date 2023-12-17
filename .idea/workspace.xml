@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a871aed-7fe6-4f96-b709-864cff7b2b65" name="Changes" comment="Логика создания поста через админку">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8a67c4c8-2aab-474c-b13d-62eeba7365d4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8a67c4c8-2aab-474c-b13d-62eeba7365d4.xml" afterDir="false" />
+    <list default="true" id="0a871aed-7fe6-4f96-b709-864cff7b2b65" name="Changes" comment="Вывод постов а дминку, запрос на выборку постов с авторами">
+      <change afterPath="$PROJECT_DIR$/assets/images/posts/Anime-Oshino-Shinobu-Monogatari-(Series)-4186601.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/posts/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/posts/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/posts/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/posts/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/database/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path.php" beforeDir="false" afterPath="$PROJECT_DIR$/path.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,34 +53,38 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2X4KG7sEl4KkmVZovnlMVi21BbY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Ampps/www/DiscoveryBashkiria/admin/users&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Program Files/Ampps/www/DiscoveryBashkiria/admin/users",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Program Files\Ampps\www\DiscoveryBashkiria\admin\users" />
@@ -115,7 +118,8 @@
       <workItem from="1700899016553" duration="4898000" />
       <workItem from="1700903985946" duration="851000" />
       <workItem from="1702630661860" duration="10473000" />
-      <workItem from="1702717930127" duration="8520000" />
+      <workItem from="1702717930127" duration="8755000" />
+      <workItem from="1702823380211" duration="2758000" />
     </task>
     <task id="LOCAL-00001" summary="Добавил дату в файл README.md. Подтянул файлы из IDE">
       <created>1699120654878</created>
@@ -236,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702726922033</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Вывод постов а дминку, запрос на выборку постов с авторами">
+      <created>1702730644359</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1702730644359</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,6 +265,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Добавил дату в файл README.md. Подтянул файлы из IDE" />
     <MESSAGE value="Добавил общие запросы на SELECT, INSERT, UPDATE и DELETE" />
     <MESSAGE value="Добавил возможность добавления нового пользователя в бд и проверки при регистрации нового пользователя" />
@@ -271,6 +283,7 @@
     <MESSAGE value="создание, чтение, редактирование и удаление &quot;Категорий&quot;" />
     <MESSAGE value="Вывод &quot;Категорий&quot; на главной странице + добавлние переменной SITE_ROOT" />
     <MESSAGE value="Логика создания поста через админку" />
-    <option name="LAST_COMMIT_MESSAGE" value="Логика создания поста через админку" />
+    <MESSAGE value="Вывод постов а дминку, запрос на выборку постов с авторами" />
+    <option name="LAST_COMMIT_MESSAGE" value="Вывод постов а дминку, запрос на выборку постов с авторами" />
   </component>
 </project>

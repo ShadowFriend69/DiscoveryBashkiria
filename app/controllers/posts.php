@@ -2,6 +2,10 @@
 
 include SITE_ROOT . "/app/database/db.php";
 
+if (!$_SESSION){
+    header('location: ' . BASE_URL . 'log.php');
+}
+
 $errMsg = '';
 $id = '';
 $title = '';
@@ -16,6 +20,27 @@ $postsAdm = selectAllFromPostsWithUsers('posts', 'users');
 
 // Код для добавления нового поста
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_post'])) {
+
+    if (!empty($_FILES['post_img']['name'])){
+        $imgName = time() . "_" . $_FILES['post_img']['name'];
+        $fileTmpName = $_FILES['post_img']['tmp_name'];
+        $fileType = $_FILES['post_img']['type'];
+        $destination = ROOT_PATH . "\assets\images\posts\\" . $imgName;
+        $result = move_uploaded_file($fileTmpName, $destination);
+
+        if (strpos($fileType, 'image') === false) {
+            die("Можно загружать только изображения!");
+        }else{
+            if ($result){
+                $_POST['post_img'] = $imgName;
+            }else{
+                $errMsg = "Ошибка загрузки изображения на сервер!";
+            }
+        }
+    }else{
+        $errMsg = "Ошибка получения картинки!";
+    }
+
     $title = trim($_POST['post_title']);
     $content = trim($_POST['post_content']);
     $topic = trim($_POST['post_topic']);
