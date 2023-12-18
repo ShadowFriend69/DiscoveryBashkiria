@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a871aed-7fe6-4f96-b709-864cff7b2b65" name="Changes" comment="Логика загрузки картинок на сервер с помощью php">
-      <change afterPath="$PROJECT_DIR$/app/helps/errorInfo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/posts/1702902617_Space.Hulk.Deathwing.Enhanced.Edition.v2.46-OFME (1).torrent" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/posts/1702902649_Space.Hulk.Deathwing.Enhanced.Edition.v2.46-OFME.torrent" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/posts/1702902773_Space.Hulk.Deathwing.Enhanced.Edition.v2.46-OFME.torrent" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/posts/1702902881_Space.Hulk.Deathwing.Enhanced.Edition.v2.46-OFME.torrent" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/posts/1702903324_Space.Hulk.Deathwing.Enhanced.Edition.v2.46-OFME (1).torrent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8a67c4c8-2aab-474c-b13d-62eeba7365d4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8a67c4c8-2aab-474c-b13d-62eeba7365d4.xml" afterDir="false" />
+    <list default="true" id="0a871aed-7fe6-4f96-b709-864cff7b2b65" name="Changes" comment="Оптмизация вывода ошибок при создании поста">
+      <change afterPath="$PROJECT_DIR$/admin/posts/edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/posts/1702911436_Anime-Oshino-Shinobu-Monogatari-(Series)-4186601.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/posts/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/posts/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/posts/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/posts/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/topics/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/topics/edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/db.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +122,7 @@
       <workItem from="1702630661860" duration="10473000" />
       <workItem from="1702717930127" duration="8755000" />
       <workItem from="1702823380211" duration="3577000" />
-      <workItem from="1702898411103" duration="2720000" />
+      <workItem from="1702898411103" duration="11772000" />
     </task>
     <task id="LOCAL-00001" summary="Добавил дату в файл README.md. Подтянул файлы из IDE">
       <created>1699120654878</created>
@@ -262,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702826206842</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Оптмизация вывода ошибок при создании поста">
+      <created>1702903638437</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1702903638437</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,6 +302,7 @@
     <MESSAGE value="Логика создания поста через админку" />
     <MESSAGE value="Вывод постов а дминку, запрос на выборку постов с авторами" />
     <MESSAGE value="Логика загрузки картинок на сервер с помощью php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Логика загрузки картинок на сервер с помощью php" />
+    <MESSAGE value="Оптмизация вывода ошибок при создании поста" />
+    <option name="LAST_COMMIT_MESSAGE" value="Оптмизация вывода ошибок при создании поста" />
   </component>
 </project>

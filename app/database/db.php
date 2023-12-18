@@ -150,6 +150,27 @@ function update_topic($table, $topic_id, $params){
 
     dbCheckError($query);
 }
+// обновление поста
+function update_post($table, $post_id, $params){
+    global $pdo;
+    $i = 0;
+    $str = '';
+    foreach ($params as $key => $value){
+        if ($i === 0){
+            $str = $str . $key . " = '" . $value . "'";
+        }else{
+            $str = $str . ", $key" . " = '" . $value . "'";
+        }
+        $i++;
+    }
+
+    $sql = "UPDATE $table SET $str WHERE post_id = $post_id";
+
+    $query = $pdo->prepare($sql);
+    $query->execute($params);
+
+    dbCheckError($query);
+}
 
 // Удаление строки в таблице
 function delete($table, $user_id){
@@ -168,6 +189,18 @@ function delete_topic($table, $topic_id){
     global $pdo;
 
     $sql = "DELETE FROM $table WHERE topic_id = $topic_id";
+
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    dbCheckError($query);
+}
+
+// Удаление строки в таблице с постами
+function delete_post($table, $post_id){
+    global $pdo;
+
+    $sql = "DELETE FROM $table WHERE post_id = $post_id";
 
     $query = $pdo->prepare($sql);
     $query->execute();

@@ -50,18 +50,18 @@
                 <div class="col-4">Управление</div>
             </div>
             <? foreach ($postsAdm as $key => $post): ?>
-            <div class="row post">
-                <div class="id col-1"><?=$key + 1; ?></div>
-                <div class="title col-5"><?=$post['post_title']; ?></div>
-                <div class="author col-2"><?=$post['user_name']; ?></div>
-                <div class="edit col-1"><a href="">Edit</a></div>
-                <div class="delete col-1"><a href="">Delete</a></div>
-                <?php if ($post['post_status']): ?>
-                    <div class="status col-2"><a href="">unpublish</a></div>
-                <?php else: ?>
-                <div class="status col-2"><a href="">publish</a></div>
-                <? endif; ?>
-            </div>
+                <div class="row post">
+                    <div class="id col-1"><?=$key + 1; ?></div>
+                    <div class="title col-5"><?=$post['post_title']; ?></div>
+                    <div class="author col-2"><?=$post['user_name']; ?></div>
+                    <div class="edit col-1"><a href="edit.php?id=<?=$post['post_id']; ?>">Edit</a></div>
+                    <div class="delete col-1"><a href="edit.php?delete_id=<?=$post['post_id']; ?>">Delete</a></div>
+                    <?php if ($post['post_status']): ?>
+                        <div class="status col-2"><a href="edit.php?publish=0&pub_id=<?=$post['post_id']; ?>">unpublish</a></div>
+                    <?php else: ?>
+                        <div class="status col-2"><a href="edit.php?publish=1&pub_id=<?=$post['post_id']; ?>">publish</a></div>
+                    <? endif; ?>
+                </div>
             <?php endforeach; ?>
         </div>
     </div>
