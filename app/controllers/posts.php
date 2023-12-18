@@ -6,7 +6,7 @@ if (!$_SESSION){
     header('location: ' . BASE_URL . 'log.php');
 }
 
-$errMsg = '';
+$errMsg = [];
 $id = '';
 $title = '';
 $content = '';
@@ -29,16 +29,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_post'])) {
         $result = move_uploaded_file($fileTmpName, $destination);
 
         if (strpos($fileType, 'image') === false) {
-            die("Можно загружать только изображения!");
+            array_push($errMsg, "Можно загружать только изображения!");
         }else{
             if ($result){
                 $_POST['post_img'] = $imgName;
             }else{
-                $errMsg = "Ошибка загрузки изображения на сервер!";
+                array_push($errMsg, "Ошибка загрузки изображения на сервер!");
             }
         }
     }else{
-        $errMsg = "Ошибка получения картинки!";
+        array_push($errMsg, "Ошибка получения картинки!");
     }
 
     $title = trim($_POST['post_title']);
@@ -47,9 +47,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_post'])) {
     $publish = isset($_POST['publish']) ? 1 : 0;
 
     if($title === '' || $content === '' || $topic === ''){
-        $errMsg = "Не все поля заполнены!";
+        array_push($errMsg, "Не все поля заполнены!");
     }elseif (mb_strlen($title, 'UTF-8') < 5){
-        $errMsg = "Название статьи должно быть более 5-ти символов";
+        array_push($errMsg, "Название статьи должно быть более 5-ти символов");
     }else{
         $post = [
             'user_id' => $_SESSION['id'],

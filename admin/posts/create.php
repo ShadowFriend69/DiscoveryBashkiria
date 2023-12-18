@@ -27,7 +27,7 @@
 
 <!-- Блок HEADER START -->
 
-<?php include("../../app/include/header-admin.php"); ?>
+<?php include "../../app/include/header-admin.php"; ?>
 
 <!-- Блок HEADER END -->
 
@@ -46,13 +46,17 @@
                 <h2>Добавление записи</h2>
             </div>
             <div class="row add-post">
+                <div class="mb-12 col-12 col-md-12 err">
+                    <!-- Вывод массива с ошибками -->
+                    <?php include "../../app/helps/errorInfo.php"; ?>
+                </div>
                 <form action="create.php" method="post" enctype="multipart/form-data">
                     <div class="col mb-4">
-                        <input name="post_title" type="text" class="form-control" placeholder="Название статьи" aria-label="Название статьи">
+                        <input value="<?=$title; ?>" name="post_title" type="text" class="form-control" placeholder="Название статьи" aria-label="Название статьи">
                     </div>
                     <div class="col">
                         <label for="editor" class="form-label">Содержимое записи</label>
-                        <textarea name="post_content" id="editor" class="form-control" rows="6"></textarea>
+                        <textarea name="post_content" id="editor" class="form-control" rows="6"><?=$content; ?></textarea>
                     </div>
                     <div class="input-group col mb-4 mt-4">
                         <input name="post_img" type="file" class="form-control" id="inputGroupFile02">

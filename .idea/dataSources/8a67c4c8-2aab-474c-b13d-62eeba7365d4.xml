@@ -1070,7 +1070,7 @@ test|schema||muha|localhost|UPDATE|G</Grants>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
     <column id="304" parent="301" name="post_id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>7</AutoIncrement>
       <Comment>id поста</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
@@ -1109,7 +1109,6 @@ test|schema||muha|localhost|UPDATE|G</Grants>
     <column id="310" parent="301" name="topic_id">
       <Comment>id категории</Comment>
       <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
     <column id="311" parent="301" name="post_created_date">
@@ -1119,107 +1118,118 @@ test|schema||muha|localhost|UPDATE|G</Grants>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <index id="312" parent="301" name="PRIMARY">
+    <foreign-key id="312" parent="301" name="posts_ibfk_1">
+      <ColNames>topic_id</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>topic_id</RefColNames>
+      <RefTableName>topics</RefTableName>
+    </foreign-key>
+    <index id="313" parent="301" name="PRIMARY">
       <ColNames>post_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="313" parent="301" name="PRIMARY">
+    <index id="314" parent="301" name="topic_id">
+      <ColNames>topic_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="315" parent="301" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="314" parent="302" name="topic_id">
+    <column id="316" parent="302" name="topic_id">
       <AutoIncrement>12</AutoIncrement>
       <Comment>id категории</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="315" parent="302" name="topic_name">
+    <column id="317" parent="302" name="topic_name">
       <Comment>уникальное название категории</Comment>
       <DasType>varchar(121)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="316" parent="302" name="topic_description">
+    <column id="318" parent="302" name="topic_description">
       <Comment>описание категории</Comment>
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <index id="317" parent="302" name="PRIMARY">
+    <index id="319" parent="302" name="PRIMARY">
       <ColNames>topic_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="318" parent="302" name="topic_name">
+    <index id="320" parent="302" name="topic_name">
       <ColNames>topic_name</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="319" parent="302" name="PRIMARY">
+    <key id="321" parent="302" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="320" parent="302" name="topic_name">
+    <key id="322" parent="302" name="topic_name">
       <UnderlyingIndexName>topic_name</UnderlyingIndexName>
     </key>
-    <column id="321" parent="303" name="user_id">
-      <AutoIncrement>30</AutoIncrement>
+    <column id="323" parent="303" name="user_id">
+      <AutoIncrement>29</AutoIncrement>
       <Comment>id пользователя</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="322" parent="303" name="is_user_admin">
+    <column id="324" parent="303" name="is_user_admin">
       <Comment>является ли пользователь админом</Comment>
       <DasType>tinyint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="323" parent="303" name="user_name">
+    <column id="325" parent="303" name="user_name">
       <Comment>логин пользователя</Comment>
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="324" parent="303" name="user_email">
+    <column id="326" parent="303" name="user_email">
       <Comment>почта пользователя</Comment>
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="325" parent="303" name="user_password">
+    <column id="327" parent="303" name="user_password">
       <Comment>пароль пользователя</Comment>
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="326" parent="303" name="user_creatdate">
+    <column id="328" parent="303" name="user_creatdate">
       <Comment>дата добавления пользователя</Comment>
       <DasType>timestamp|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <index id="327" parent="303" name="PRIMARY">
+    <index id="329" parent="303" name="PRIMARY">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="328" parent="303" name="user_email">
+    <index id="330" parent="303" name="user_email">
       <ColNames>user_email</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="329" parent="303" name="PRIMARY">
+    <key id="331" parent="303" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="330" parent="303" name="user_email">
+    <key id="332" parent="303" name="user_email">
       <UnderlyingIndexName>user_email</UnderlyingIndexName>
     </key>
   </database-model>

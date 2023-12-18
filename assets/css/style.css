@@ -341,6 +341,9 @@ FORMS
     transition: all 0.3s;
 }
 
+/*
+FORMS
+ */
 form div.err p{
     color: red;
     font-style: italic;
