@@ -1,6 +1,10 @@
 <?php
     include "path.php";
     include "app/controllers/topics.php";
+    // $posts = selectAll('posts', ['post_status' => 1]);
+    // tt($posts);
+    $posts = selectAllFromPostsWithUsersOnIndex('posts', 'users');
+//    tt($posts);
 ?>
 <!doctype html>
 <html lang="en">
@@ -27,7 +31,7 @@
 
 <!-- Блок HEADER START -->
 
-<?php include('app/include/header.php'); ?>
+<?php include "app/include/header.php"; ?>
 
 <!-- Блок HEADER END -->
 
@@ -78,111 +82,26 @@
         <!-- main Content-->
         <div class="main-content col-md-9 col-12">
             <h2>Последние публикации</h2>
-            <div class="post row">
-                <div class="ing col-12 col-md-4">
-                    <img src="assets/images/4.jpg" alt="" class="img-thumbnail">
+
+            <?php foreach ($posts as $post): ?>
+                <div class="post row">
+                    <div class="ing col-12 col-md-4">
+                        <img src="<?=BASE_URL . 'assets/images/posts/' . $post['post_img']; ?>" alt="<?=$post['post_title']; ?>" class="img-thumbnail">
+                    </div>
+                    <div class="post_text col-12 col-md-8">
+                        <h3>
+                            <a href="<?=BASE_URL . 'single.php?post=' . $post['post_id']; ?>"><?=substr($post['post_title'], 0, 120) . '...'; ?></a>
+                        </h3>
+                        <i class="far fa-user"> <?=$post['user_name']; ?></i>
+                        <i class="far fa-calendar"> <?=$post['post_created_date']; ?></i>
+                        <p class="preview-text">
+                            <!-- Вроде и так без ошибок -->
+                            <!-- substr($post['post_content'], 0, 150) . '...'; -->
+                            <?=mb_substr($post['post_content'], 0, 150, 'UTF-8') . '...'; ?>
+                        </p>
+                    </div>
                 </div>
-                <div class="post_text col-12 col-md-8">
-                    <h3>
-                        <a href="#">Увлекательное путешествие на г.Торатау</a>
-                    </h3>
-                    <i class="far fa-user"> Имя Автора</i>
-                    <i class="far fa-calendar"> Oct 21, 2023</i>
-                    <p class="preview-text">
-                        Кратенькое описание статьи, Кратенькое описание статьи
-                    </p>
-                </div>
-            </div>
-            <div class="post row">
-                <div class="ing col-12 col-md-4">
-                    <img src="assets/images/4.jpg" alt="" class="img-thumbnail">
-                </div>
-                <div class="post_text col-12 col-md-8">
-                    <h3>
-                        <a href="#"> Прикольная статья на тему динамического сайта...</a>
-                    </h3>
-                    <i class="far fa-user"> Имя Автора</i>
-                    <i class="far fa-calendar"> Oct 21, 2023</i>
-                    <p class="preview-text">
-                        Кратенькое описание статьи, Кратенькое описание статьи
-                    </p>
-                </div>
-            </div>
-            <div class="post row">
-                <div class="ing col-12 col-md-4">
-                    <img src="assets/images/4.jpg" alt="" class="img-thumbnail">
-                </div>
-                <div class="post_text col-12 col-md-8">
-                    <h3>
-                        <a href="#"> Прикольная статья на тему динамического сайта...</a>
-                    </h3>
-                    <i class="far fa-user"> Имя Автора</i>
-                    <i class="far fa-calendar"> Oct 21, 2023</i>
-                    <p class="preview-text">
-                        Кратенькое описание статьи, Кратенькое описание статьи
-                    </p>
-                </div>
-            </div>
-            <div class="post row">
-                <div class="ing col-12 col-md-4">
-                    <img src="assets/images/4.jpg" alt="" class="img-thumbnail">
-                </div>
-                <div class="post_text col-12 col-md-8">
-                    <h3>
-                        <a href="#"> Прикольная статья на тему динамического сайта...</a>
-                    </h3>
-                    <i class="far fa-user"> Имя Автора</i>
-                    <i class="far fa-calendar"> Oct 21, 2023</i>
-                    <p class="preview-text">
-                        Кратенькое описание статьи, Кратенькое описание статьи
-                    </p>
-                </div>
-            </div>
-            <div class="post row">
-                <div class="ing col-12 col-md-4">
-                    <img src="assets/images/4.jpg" alt="" class="img-thumbnail">
-                </div>
-                <div class="post_text col-12 col-md-8">
-                    <h3>
-                        <a href="#"> Прикольная статья на тему динамического сайта...</a>
-                    </h3>
-                    <i class="far fa-user"> Имя Автора</i>
-                    <i class="far fa-calendar"> Oct 21, 2023</i>
-                    <p class="preview-text">
-                        Кратенькое описание статьи, Кратенькое описание статьи
-                    </p>
-                </div>
-            </div>
-            <div class="post row">
-                <div class="ing col-12 col-md-4">
-                    <img src="assets/images/4.jpg" alt="" class="img-thumbnail">
-                </div>
-                <div class="post_text col-12 col-md-8">
-                    <h3>
-                        <a href="#"> Прикольная статья на тему динамического сайта...</a>
-                    </h3>
-                    <i class="far fa-user"> Имя Автора</i>
-                    <i class="far fa-calendar"> Oct 21, 2023</i>
-                    <p class="preview-text">
-                        Кратенькое описание статьи, Кратенькое описание статьи
-                    </p>
-                </div>
-            </div>
-            <div class="post row">
-                <div class="ing col-12 col-md-4">
-                    <img src="assets/images/4.jpg" alt="" class="img-thumbnail">
-                </div>
-                <div class="post_text col-12 col-md-8">
-                    <h3>
-                        <a href="#"> Прикольная статья на тему динамического сайта...</a>
-                    </h3>
-                    <i class="far fa-user"> Имя Автора</i>
-                    <i class="far fa-calendar"> Oct 21, 2023</i>
-                    <p class="preview-text">
-                        Кратенькое описание статьи, Кратенькое описание статьи
-                    </p>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
         <!-- Sidebar Content -->
         <div class="sidebar col-md-3 col-12">

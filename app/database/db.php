@@ -233,3 +233,23 @@ function selectAllFromPostsWithUsers($table1, $table2){
 
     return $query->fetchAll();
 }
+
+// Выборка постов с автором на главную
+function selectAllFromPostsWithUsersOnIndex($table1, $table2){
+    global $pdo;
+
+    $sql = "
+            SELECT 
+                p.*,
+                u.user_name
+            FROM 
+                $table1 AS p JOIN $table2 AS u ON p.user_id = u.user_id WHERE p.post_status = 1
+    ";
+
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    dbCheckError($query);
+
+    return $query->fetchAll();
+}
