@@ -243,7 +243,11 @@ function selectAllFromPostsWithUsersOnIndex($table1, $table2){
                 p.*,
                 u.user_name
             FROM 
-                $table1 AS p JOIN $table2 AS u ON p.user_id = u.user_id WHERE p.post_status = 1
+                $table1 AS p 
+            JOIN
+                $table2 AS u ON p.user_id = u.user_id 
+            WHERE
+                p.post_status = 1
     ";
 
     $query = $pdo->prepare($sql);
@@ -295,4 +299,28 @@ function searchInTitleAndContent($text, $table1, $table2){
     dbCheckError($query);
 
     return $query->fetchAll();
+}
+
+// Выборка поста с автором для сингл
+function selectPostFromPostsWithUsersOnSingle($table1, $table2, $id){
+    global $pdo;
+
+    $sql = "
+            SELECT 
+                p.*,
+                u.user_name
+            FROM 
+                $table1 AS p
+            JOIN
+                $table2 AS u ON p.user_id = u.user_id
+            WHERE
+                p.post_id = $id
+    ";
+
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    dbCheckError($query);
+
+    return $query->fetch();
 }
