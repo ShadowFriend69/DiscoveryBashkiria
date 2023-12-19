@@ -20,6 +20,8 @@ function userAuth($user): void
     }
 }
 
+$users = selectAll('users');
+
 // Код для регистрации
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-reg'])){
 
@@ -113,4 +115,56 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create-user'])){
 }else{
     $login = '';
     $email = '';
+}
+
+// удаление пользователя в админке
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['delete_id'])) {
+    $id = $_GET['delete_id'];
+
+    delete('users', $id);
+    header('location: ' . BASE_URL . 'admin/users/index.php');
+}
+
+// редактирование пользователя в админке
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['edit_id'])) {
+    $user = selectOne('users', ['user_id' => $_GET['edit_id']]);
+
+    // tt($user);
+
+    $id =  $user['user_id'];
+    $admin = $user['is_user_admin'];
+    $username = $user['user_name'];
+    $email = $user['user_email'];
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update-user'])) {
+
+    $id =  $_POST['id'];
+    $email = trim($_POST['email']);
+    $login = trim($_POST['login']);
+    $passwordFirst = trim($_POST['password-first']);
+    $passwordSecond = trim($_POST['password-second']);
+    $admin = isset($_POST['admin']) ? 1 : 0;
+
+    if($email === '' || $login === ''){
+        array_push($errMsg, "Не все поля заполнены!");
+    }elseif (mb_strlen($login, 'UTF-8') < 2){
+        array_push($errMsg, "Логин должен быть больше двух символов");
+    }elseif ($passwordFirst !== $passwordSecond){
+        array_push($errMsg, "Пароли должны соответствовать друг другу");
+    }else{
+        $password = password_hash($passwordFirst, PASSWORD_DEFAULT);
+        if (isset($_POST['admin'])) $admin = 1;
+        $user = [
+            'is_user_admin' => $admin,
+            'user_name' => $login,
+           // 'user_email' => $email,
+            'user_password' => $password,
+        ];
+        $post = update('users', $id, $user);
+        header('location: ' . BASE_URL . 'admin/users/index.php');
+    }
+}else{
+//    $login = '';
+//    $email = '';
 }

@@ -1,7 +1,7 @@
 <?php
-    include '../../app/database/db.php';
-    include '../../path.php';
-
+    include "../../path.php";
+    // include '../../app/database/db.php';
+    include "../../app/controllers/users.php"
 // session_start();
 ?>
 <!doctype html>
@@ -45,26 +45,27 @@
                 <a href="<?php echo BASE_URL . "admin/users/index.php"; ?>" class="col-2 btn btn-warning">Редактировать</a>
             </div>
             <div class="row title-table">
-                <h2>Управление пользователями</h2>
+                <h2>Пользователи</h2>
                 <div class="col-1">ID</div>
-                <div class="col-5">Логин</div>
+                <div class="col-2">Логин</div>
+                <div class="col-3">Почта</div>
                 <div class="col-2">Роль</div>
                 <div class="col-4">Управление</div>
             </div>
+            <?php foreach ($users as $key => $user): ?>
             <div class="row post">
-                <div class="id col-1">1</div>
-                <div class="title col-5">Root1</div>
-                <div class="author col-2">Admin</div>
-                <div class="edit col-2"><a href="">Edit</a></div>
-                <div class="delete col-2"><a href="">Delete</a></div>
+                <div class="col-1"><?=$user['user_id']; ?></div>
+                <div class="col-2"><?=$user['user_name']; ?></div>
+                <div class="col-3"><?=$user['user_email']; ?></div>
+                <?php if ($user['is_user_admin'] == 1): ?>
+                    <div class="col-2">Admin</div>
+                <?php else: ?>
+                    <div class="col-2">User</div>
+                <?php endif; ?>
+                <div class="edit col-2"><a href="edit.php?edit_id=<?=$user['user_id'];?>">Edit</a></div>
+                <div class="delete col-2"><a href="index.php?delete_id=<?=$user['user_id'];?>">Delete</a></div>
             </div>
-            <div class="row post">
-                <div class="id col-1">1</div>
-                <div class="title col-5">Тест1</div>
-                <div class="author col-2">User</div>
-                <div class="edit col-2"><a href="">Edit</a></div>
-                <div class="delete col-2"><a href="">Delete</a></div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>
