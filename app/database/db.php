@@ -267,3 +267,32 @@ function selectTopPostOnIndex($table1){
 
     return $query->fetchAll();
 }
+
+// Поиск по заголовкам и содержимому (простой)
+function searchInTitleAndContent($text, $table1, $table2){
+    $text = trim(strip_tags(stripcslashes(htmlspecialchars($text))));
+    global $pdo;
+
+    $sql = "
+            SELECT 
+                p.*,
+                u.user_name
+            FROM 
+                $table1 AS p 
+            JOIN 
+                $table2 AS u ON p.user_id = u.user_id 
+            WHERE
+                p.post_status = 1
+            AND 
+                p.post_title LIKE '%$text%' 
+            OR
+                p.post_content LIKE '%$text%'
+    ";
+
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    dbCheckError($query);
+
+    return $query->fetchAll();
+}

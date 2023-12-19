@@ -94,7 +94,7 @@
         <div class="sidebar col-md-3 col-12">
             <div class="section search">
                 <h3>Поиск</h3>
-                <form action="#" method="post">
+                <form action="search.php" method="post">
                     <input type="text" name="search-term" class="text-input" placeholder="Type to search">
                 </form>
             </div>
