@@ -1,9 +1,6 @@
 <?php
-    include '../../app/database/db.php';
-    include '../../app/controllers/users.php';
-    include '../../path.php';
-
-// session_start();
+    include "../../path.php";
+    include "../../app/controllers/users.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -30,7 +27,7 @@
 
 <!-- Блок HEADER START -->
 
-<?php include('../../app/include/header-admin.php'); ?>
+<?php include("../../app/include/header-admin.php"); ?>
 
 <!-- Блок HEADER END -->
 
@@ -49,6 +46,10 @@
                 <h2>Добавление пользователя</h2>
             </div>
             <div class="row add-post">
+                <div class="mb-12 col-12 col-md-12 err">
+                    <!-- Вывод массива с ошибками -->
+                    <?php include "../../app/helps/errorInfo.php"; ?>
+                </div>
                 <form action="create.php" method="post">
                     <div class="col">
                         <label for="formGroupExampleInput" class="form-label">Ваш логин</label>
@@ -66,13 +67,12 @@
                         <label for="exampleInputPassword2" class="form-label">Повторите пароль</label>
                         <input name="password-second" type="password" class="form-control" id="exampleInputPassword2">
                     </div>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">User</option>
-                        <option value="2">Admin</option>
-                    </select>
+                    <input name="admin" class="form-check-input" value="1" type="checkbox"  id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Admin
+                    </label>
                     <div class="col">
-                        <button class="btn btn-primary" type="submit">Добавить</button>
+                        <button name="create-user" class="btn btn-primary" type="submit">Добавить</button>
                     </div>
                 </form>
             </div>
@@ -86,7 +86,7 @@
 
 <!-- Блок footer START -->
 
-<?php include('../../app/include/footer.php'); ?>
+<?php include("../../app/include/footer.php"); ?>
 
 <!-- Блок footer END -->
 
