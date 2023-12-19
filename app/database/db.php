@@ -253,3 +253,17 @@ function selectAllFromPostsWithUsersOnIndex($table1, $table2){
 
     return $query->fetchAll();
 }
+
+// Выборка топ постов на главную
+function selectTopPostOnIndex($table1){
+    global $pdo;
+
+    $sql = "SELECT * FROM $table1 WHERE topic_id = 12";
+
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    dbCheckError($query);
+
+    return $query->fetchAll();
+}
