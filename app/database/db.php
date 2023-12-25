@@ -234,8 +234,45 @@ function selectAllFromPostsWithUsers($table1, $table2){
     return $query->fetchAll();
 }
 
-// Выборка опубликованных постов с автором с необязательным параметром
-function selectAllFromPostsWithUsersOnIndex($table1, $table2, $params = []){
+// Выборка опубликованных постов с автором для index и с лимитом в 2 поста
+function selectAllFromPostsWithUsersOnIndex($table1, $table2, $limit, $offset){
+    global $pdo;
+
+    $sql = "
+            SELECT 
+                p.*,
+                u.user_name
+            FROM 
+                $table1 AS p 
+            JOIN
+                $table2 AS u ON p.user_id = u.user_id 
+            WHERE
+                p.post_status = 1
+            LIMIT
+                $limit
+            OFFSET
+                $offset
+    ";
+
+    if(!empty($params)){
+        foreach ($params as $key => $value){
+            if (!is_numeric($value)){
+                $value = "'" . $value . "'";
+            }
+            $sql = $sql . " AND $key = $value";
+        }
+    }
+
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    dbCheckError($query);
+
+    return $query->fetchAll();
+}
+
+// Выборка опубликованных постов с автором с необязательным параметром для категорий
+function selectAllFromPostsWithUsersOnCategory($table1, $table2, $params = []){
     global $pdo;
 
     $sql = "
@@ -266,7 +303,6 @@ function selectAllFromPostsWithUsersOnIndex($table1, $table2, $params = []){
 
     return $query->fetchAll();
 }
-
 // Выборка топ постов на главную
 function selectTopPostOnIndex($table1){
     global $pdo;
@@ -332,4 +368,25 @@ function selectPostFromPostsWithUsersOnSingle($table1, $table2, $id){
     dbCheckError($query);
 
     return $query->fetch();
+}
+
+// Выборка поста с автором для сингл
+function countRow($table){
+    global $pdo;
+
+    $sql = "
+            SELECT 
+                COUNT(*)
+            FROM 
+                $table t
+            WHERE
+                t.post_status = 1
+    ";
+
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    dbCheckError($query);
+
+    return $query->fetchColumn();
 }

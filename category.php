@@ -2,7 +2,7 @@
     include "path.php";
     include "app/controllers/topics.php";
 
-    $posts = selectAllFromPostsWithUsersOnIndex('posts', 'users', ['topic_id' => $_GET['id']]);
+    $posts = selectAllFromPostsWithUsersOnCategory('posts', 'users', ['topic_id' => $_GET['id']]);
     $topPosts = selectTopPostOnIndex('posts');
     $category = selectOne('topics', ['topic_id' => $_GET['id']]);
 ?>
