@@ -70,7 +70,7 @@
     <div class="content row">
         <!-- main Content-->
         <div class="main-content col-md-9 col-12">
-            <h2>Последние публикации</h2>
+            <h2>Последние экскурсии</h2>
 
             <?php foreach ($posts as $post): ?>
                 <div class="post row">
@@ -103,13 +103,11 @@
                 <ul>
                     <?php foreach ($topics as $key => $topic): ?>
                         <li>
-                            <a href="#"><?=$topic['topic_name']; ?></a>
+                            <a href="<?=BASE_URL . 'category.php?id=' . $topic['topic_id']; ?>"><?=$topic['topic_name']; ?></a>
                         </li>
                     <?php endforeach; ?>
-
                 </ul>
             </div>
-
         </div>
     </div>
 </div>

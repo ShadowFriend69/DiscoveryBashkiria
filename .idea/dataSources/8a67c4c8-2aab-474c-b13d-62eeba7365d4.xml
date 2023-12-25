@@ -1070,7 +1070,7 @@ test|schema||muha|localhost|UPDATE|G</Grants>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
     <column id="304" parent="301" name="post_id">
-      <AutoIncrement>10</AutoIncrement>
+      <AutoIncrement>17</AutoIncrement>
       <Comment>id поста</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
@@ -1140,7 +1140,7 @@ test|schema||muha|localhost|UPDATE|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="316" parent="302" name="topic_id">
-      <AutoIncrement>12</AutoIncrement>
+      <AutoIncrement>13</AutoIncrement>
       <Comment>id категории</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
@@ -1177,7 +1177,7 @@ test|schema||muha|localhost|UPDATE|G</Grants>
       <UnderlyingIndexName>topic_name</UnderlyingIndexName>
     </key>
     <column id="323" parent="303" name="user_id">
-      <AutoIncrement>30</AutoIncrement>
+      <AutoIncrement>31</AutoIncrement>
       <Comment>id пользователя</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>

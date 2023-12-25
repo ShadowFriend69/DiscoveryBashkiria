@@ -50,7 +50,7 @@ function selectAll($table, $params = []){
     return $query->fetchAll();
 }
 
-// Запрос на получение одной строки из таблицы
+// Запрос на получение одной строки из таблицы с параметром
 function selectOne($table, $params = []){
     global $pdo;
 
@@ -234,8 +234,8 @@ function selectAllFromPostsWithUsers($table1, $table2){
     return $query->fetchAll();
 }
 
-// Выборка постов с автором на главную
-function selectAllFromPostsWithUsersOnIndex($table1, $table2){
+// Выборка опубликованных постов с автором с необязательным параметром
+function selectAllFromPostsWithUsersOnIndex($table1, $table2, $params = []){
     global $pdo;
 
     $sql = "
@@ -249,6 +249,15 @@ function selectAllFromPostsWithUsersOnIndex($table1, $table2){
             WHERE
                 p.post_status = 1
     ";
+
+    if(!empty($params)){
+        foreach ($params as $key => $value){
+            if (!is_numeric($value)){
+                $value = "'" . $value . "'";
+            }
+            $sql = $sql . " AND $key = $value";
+        }
+    }
 
     $query = $pdo->prepare($sql);
     $query->execute();
