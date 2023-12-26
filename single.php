@@ -50,6 +50,8 @@
                 <div class="single_post_text col-12">
                     <?=$post['post_content']; ?>
                 </div>
+                <!-- Инклюдим HTML блок с комментариями -->
+                <?php include('app/include/comments.php'); ?>
             </div>
         </div>
         <!-- Sidebar Content -->

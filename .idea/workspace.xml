@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a871aed-7fe6-4f96-b709-864cff7b2b65" name="Changes" comment="Добавил вывод статей с выбранной категории">
-      <change afterPath="$PROJECT_DIR$/app/include/pagination.php" afterDir="false" />
+    <list default="true" id="0a871aed-7fe6-4f96-b709-864cff7b2b65" name="Changes" comment="Добавил навигацию на главной странице">
+      <change afterPath="$PROJECT_DIR$/app/controllers/commentsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/include/comments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8a67c4c8-2aab-474c-b13d-62eeba7365d4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8a67c4c8-2aab-474c-b13d-62eeba7365d4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/database/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/single.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +125,8 @@
       <workItem from="1702974192446" duration="9190000" />
       <workItem from="1702992998652" duration="11182000" />
       <workItem from="1703159363116" duration="795000" />
-      <workItem from="1703501933628" duration="5573000" />
+      <workItem from="1703501933628" duration="6266000" />
+      <workItem from="1703586831638" duration="3379000" />
     </task>
     <task id="LOCAL-00001" summary="Добавил дату в файл README.md. Подтянул файлы из IDE">
       <created>1699120654878</created>
@@ -323,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703504691501</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Добавил навигацию на главной странице">
+      <created>1703507595524</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1703507595524</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +350,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="pukpuk" />
     <MESSAGE value="Создал SESSION после регистрации на сайте" />
     <MESSAGE value="Добавил логику авторизации" />
     <MESSAGE value="Добавил логику разлогинивания" />
@@ -367,6 +374,7 @@
     <MESSAGE value="Добавил логику поиска по статьям (заголовок и контент)" />
     <MESSAGE value="Добавил возможность просмотра одной экскурсии" />
     <MESSAGE value="Добавил вывод статей с выбранной категории" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил вывод статей с выбранной категории" />
+    <MESSAGE value="Добавил навигацию на главной странице" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил навигацию на главной странице" />
   </component>
 </project>
