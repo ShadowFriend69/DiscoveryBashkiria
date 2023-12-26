@@ -10,6 +10,12 @@ function tt($value){
     exit();
 }
 
+function tte($value){
+    echo '<pre>';
+    print_r($value);
+    echo '<pre>';
+}
+
 // Проверка выполнения запроса
 function dbCheckError($query){
     $errInfo = $query->errorInfo();
@@ -171,6 +177,27 @@ function update_post($table, $post_id, $params){
 
     dbCheckError($query);
 }
+// обновление комментария
+function update_com($table, $comment_id, $params){
+    global $pdo;
+    $i = 0;
+    $str = '';
+    foreach ($params as $key => $value){
+        if ($i === 0){
+            $str = $str . $key . " = '" . $value . "'";
+        }else{
+            $str = $str . ", $key" . " = '" . $value . "'";
+        }
+        $i++;
+    }
+
+    $sql = "UPDATE $table SET $str WHERE comment_id = $comment_id";
+
+    $query = $pdo->prepare($sql);
+    $query->execute($params);
+
+    dbCheckError($query);
+}
 
 // Удаление строки в таблице
 function delete($table, $user_id){
@@ -201,6 +228,18 @@ function delete_post($table, $post_id){
     global $pdo;
 
     $sql = "DELETE FROM $table WHERE post_id = $post_id";
+
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    dbCheckError($query);
+}
+
+// Удаление строки в таблице
+function delete_comm($table, $com_id){
+    global $pdo;
+
+    $sql = "DELETE FROM $table WHERE comment_id  = $com_id";
 
     $query = $pdo->prepare($sql);
     $query->execute();

@@ -349,3 +349,29 @@ form div.err p{
     font-style: italic;
     font-size: 1rem;
 }
+
+/*
+COMMENTS
+ */
+
+.all-comments{
+    padding-top: 3rem;
+}
+.all-comments h3{
+    margin-bottom: 2rem;
+}
+.all-comments .one-comment{
+    padding: 1rem;
+    border: 1px solid #8B4513;
+    border-radius: 6px;
+    margin-bottom: 0.6rem;
+}
+.all-comments .one-comment i{
+    margin: 0.3rem 0.4rem 0 0;
+    font-weight: 600;
+}
+.all-comments .one-comment span{
+    display: inline-flex;
+    margin: 0.5rem 1.5rem 1.5rem 0;
+    font-weight: 500;
+}
